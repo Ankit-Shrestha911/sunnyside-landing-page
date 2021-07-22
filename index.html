@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root{
+      --color-1: hsl(167, 40%, 24%);
+      --color-2: hsl(198, 62%, 26%);
+      --color-3: hsl(168, 34%, 41%);
+      --color-4: hsl(210, 4%, 67%);
+      --color-5: hsl(232, 10%, 55%);
+      --color-6: hsl(213, 9%, 39%);
+      --color-7: hsl(212, 27%, 19%);
+
+    }
+
+      body{
+        font-size: 18px;
+        font-family: 'Barlow', sans-serif;
+      }
+
+      img{
+        width: 100%;
+      }
+      /* Nav-bar
+       */
+
+      .top-menu{
+        background: url('images/desktop/image-header.jpg');
+        background-position: center center;
+        height: 100vh;
+        background-attachment: fixed;
+        background-size: cover;
+        max-width: 100%;
+      }
+
+      .content{
+        padding: 2em 2em;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .list{
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .list li{
+        margin-right: 2em;
+      }
+
+      .list a{
+        text-decoration: none;
+        color: #fff;
+        padding: .6em 1.3em;
+        transition: .2s;
+      }
+
+      .list a:hover{
+        background-color: #fff;
+        color: #000;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        outline: none;
+        border: 0;
+      }
+
+      .list .active{
+        background-color: #fff;
+        color: #000;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        outline: none;
+        border: 0;
+      }
+      
+      .top-menu h1{
+        text-align: center;
+        letter-spacing: .7rem;
+        font-size: 3rem;
+        font-family: 'Fraunces', serif;
+        color: #fff;
+        margin-top: 3rem;
+        margin-bottom: 2.5em;
+      }
+
+      .top-menu img{
+        margin: 0 auto;
+        display: block;
+        width: 50px;
+
+      }
+
+      .top-menu .content .logo img{
+        width: 150px;
+      }
+
+
+      /* Utilities */
+      .btn{
+          text-decoration: none;
+          color: #000;
+          border-bottom: 3px solid  hsl(51, 100%, 49%);
+          margin-left: .4em;
+          font-weight: 900;
+          letter-spacing: .2rem;
+          font-family: 'Fraunces', serif;
+          text-align: center;
+      }
+
+      /* middle-1 */
+
+      .middle-1{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+      }
+
+      .middle-1 .card{
+        max-width: 600px;
+        height: 300px;
+        margin: auto;
+        padding: 2em;
+        width: 100%;
+      }
+
+      
+
+      
+
+      .middle-1 .card h1{
+        font-size: 3rem;
+        margin-bottom: .5em;
+        color: var(--color-7);
+        font-family: 'Fraunces', serif;
+      }
+
+      .middle-1 .card p{
+        margin-bottom: 2em;
+        padding-right: 4em;
+        color: var(--color-5);
+        line-height: 1.7;
+      }
+
+    
+
+      /* Middle-inside */
+
+     
+      .middle-1 .middle-inside-1{
+        background: url('images/desktop/image-graphic-design.jpg');
+        background-position: center;
+        background-size: cover;
+        min-height: 600px;
+        margin-top: -3px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        /* margin: auto; */
+      }
+
+      
+      .middle-1 .middle-inside-2{
+        background: url('images/desktop/image-photography.jpg');
+        background-position: center;
+        background-size: cover;
+        min-height: 600px;
+        margin-top: -3px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;  
+      }
+
+      .middle-1 .info h1{
+        text-align:center;
+        margin-bottom: 1em;
+        font-family: 'Fraunces', serif;
+        color: var(--color-6);
+
+      }
+      .middle-1 .info{
+        width: 450px;
+        margin-bottom: 2em;
+      }
+
+      .middle-1 .info p{
+        line-height: 1.6;
+        text-align: center;
+        padding: 0 1em;
+        padding-bottom: 1em;
+        color: var(--color-5);
+      }
+
+      .middle-1 .info .mid-2-p{
+        color: var(--color-7);
+      }
+
+      /* Review */
+
+      .review{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+     
+      }
+
+      .review .review-card{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        grid-column-gap: 20px;
+        place-content: center;
+      }
+
+      .review h1{
+        margin-bottom: 5em;
+        letter-spacing: .5rem;
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+        color: var(--color-4);
+        margin-top: 2em;
+      }
+
+      .review-card .customer-review{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1.2em;
+      }
+
+      .review-card .customer-review img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 3em;
+      }
+
+      .review-card .customer-review p{
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 3em;
+        color: var(--color-5);
+      }
+
+      .review-card .customer-review h3{
+        color: var(--color-7);
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+        }
+
+        .review-card .customer-review .post{
+          margin-top: .5em;
+          color: var(--color-4);
+        }
+
+        /* Images */
+        
+        .images-4 img{
+          max-width: 100%;
+        }
+        .images-4{
+            display: grid;
+            grid-template-columns: repeat(4,1fr)
+        }
+
+     /* Footer */
+
+     footer{
+       background: var(--color-3);
+      text-align: center;
+     }
+
+     footer h1{
+       padding-top: 2em;
+       color:var(--color-1);
+       font-size: 2.5rem;
+       font-family: 'Fraunces', serif;
+       font-weight: 700;
+     }
+
+     footer ul{
+       display: flex;
+       justify-content: center;
+       list-style: none;
+       margin-top: 2em;
+     }
+
+     footer ul li{
+       padding: 1em;
+     }
+
+     footer ul li a{
+       text-decoration: none;
+       color: var(--color-1);
+       font-weight: 600;
+     }
+
+     footer ul li a:hover{
+        color: #fff;
+     }
+
+     footer .icon{
+       margin-top: 4em;
+       padding-bottom: 2em;
+     }
+     footer .icon  a{
+       text-decoration: none;
+       color: var(--color-1);
+     }
+
+     footer .icon i{
+       padding: 0 .5em;
+       font-size: 25px;
+     }
+
+     /* Menu-bar */
+
+     .bar{
+       position: absolute;
+       right: 30px;
+       top: 4.5%;
+       cursor: pointer;
+       display: none;
+     }
+
+     .bar i{
+       font-size: 25px;
+       color: #fff;
+     }
+
+     footer .icon a:hover{
+       color: #fff;
+     }
+
+     /* attribute */
+     footer .attribution{
+       font-size: .8rem;
+       padding-bottom: 2em;
+       letter-spacing: .1rem;
+     }
+
+     footer .attribution a{
+       text-decoration: none;
+       color: var(--color-1);
+     }
+
+     
+     footer .attribution a:hover{
+       color: #fff;
+     }
+
+     /* Media Queries */ 
+
+      @media screen and (max-width:1024px){
+
+
+        .top-menu h1{
+          font-size: 2rem;
+        }
+
+        .content .list li a:hover{
+          background:  hsl(51, 100%, 49%);
+        }
+        .middle-1 {
+          grid-template-columns: 1fr 1fr;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .middle-1 img{
+          max-width: 100%;
+      
+        }
+
+        .middle-1 .card{
+          text-align: center;
+        }
+
+        .middle-1 .card h1{
+          font-size: 1.5rem;
+        }
+
+        .middle-1 .card p{
+          padding-right: 0;
+          text-align: center;
+        }
+
+        .middle-inside-1{
+          max-width: 100%;
+        }
+
+        .middle-inside-2{
+          max-width: 100%;
+        }
+
+        .review{
+          text-align: center;
+        }
+
+       .content .list{
+        width: 100%;
+        display: block;
+        margin-top: 2em;
+        text-align: center;
+        overflow: hidden;
+        background: #fff;
+        transition: .6s ease-in-out;
+       }
+
+       .content .list li{
+         margin: 20px 0;
+       }
+
+       .content .list li a{
+         color: #000;
+       }
+
+       .bar{
+         display: block;
+       }
+
+       .content .list.hide{
+         height: 0px;
+       }
+
+       .content .list.show{
+         height: 200px;
+       }
+
+       .images-4{
+         grid-template-columns: repeat(2,1fr);
+       }
+      
+      }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="bar">
+    <i class="fas fa-bars"></i>
+  </div>
+ 
+    <nav class="top-menu">
+
+      <div class="content">
+
+        <div class="logo">
+          <img src="images/logo.svg" alt="logo">
+        </div>
+
+        <ul class="list hide">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#" class="active">Contact</a></li>
+        </ul>
+
+      </div> 
+
+      <h1>WE ARE CREATIVES</h1>
+      <img src="images/icon-arrow-down.svg" alt="arrow-down" >
+    </nav>
+
+    <section class="middle-1">
+
+      <div class="card">
+        <h1>Transform your <br> brand</h1>
+        <p>We are a full-service creative agency specializing in helping brands grow fast. 
+          Engage your clients through compelling visuals that do most of the marketing for you.
+        </p>
+        <a href="#" class="btn"> Learn more</a>
+      </div>
+
+      <div class="pic">
+        <img src="images/desktop/image-transform.jpg" alt="egg">
+      </div>
+
+      <div class="pic">
+        <img src="images/desktop/image-stand-out.jpg" alt="stand-out">
+      </div>
+
+      <div class="card">
+        <h1> Stand out to the right audience</h1>
+        <p>
+          
+  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+        </p>
+        <a href="#" class="btn"> Learn more</a>
+      </div>
+
+      <div class="middle-inside-1">
+
+        <div class="info">
+          <h1> Graphic design</h1>
+        <p>
+          Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        </div>
+        
+      </div>
+
+      <div class="middle-inside-2">
+        <div class="info">
+          <h1>
+            Photography</h1>
+          <p class="mid-2-p">
+            Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+            </p>
+
+        </div>
+      
+      </div>
+
+    </section>
+
+    <section class="review">
+      <h1> Client testimonials</h1>
+      <div class="review-card">
+        <div class="customer-review">
+          <img src="images/image-emily.jpg" alt="">
+          <p>  We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+          </p>
+          <h3>  Emily R.</h3>
+          <p class="post">  Marketing Director</p>
+
+        </div>
+
+        <div class="customer-review">
+          <img src="images/image-thomas.jpg" alt="">
+          <p>  Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
+
+          </p>
+          <h3>  Thomas S.
+          </h3>
+          <p class="post">  Chief Operating Officer
+          </p>
+
+        </div>
+
+        <div class="customer-review">
+          <img src="images/image-jennie.jpg" alt="">
+          <p>    Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+
+          </p>
+          <h3>  Jennie F.
+          </h3>
+          <p class="post">
+            Business Owner 
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="images-4">
+      <img src="images/desktop/image-gallery-milkbottles.jpg" alt="">
+      <img src="images/desktop/image-gallery-orange.jpg" alt="">
+      <img src="images/desktop/image-gallery-cone.jpg" alt="">
+      <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="">
+    </section>
+
+    <footer>
+      <h1>sunnyside</h1>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+
+      <div class="icon">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
+  
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/Ankit-Shrestha911">Ankit Shrestha</a>.
+      </div> 
+    </footer>
+
+
+    <script>
+       let menu = document.querySelector('.list');
+      document.querySelector('.bar').addEventListener('click',()=>{
+       
+
+        if(menu.classList.contains('hide'))
+        {
+          menu.classList.remove('hide');
+          menu.classList.add('show');
+         
+        }
+        else{
+          menu.classList.add('hide');
+          menu.classList.remove('show');
+         
+        }
+
+      })
+    </script>
+ 
+</body>
+</html>
+
+
+
+  
+
+
+
+
+
+
+
+
